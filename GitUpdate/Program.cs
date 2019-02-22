@@ -16,8 +16,15 @@ namespace GitUpdate
         message = arguments[0];
       }
 
+      string gitUpdateCommand = $"Git add *{Environment.NewLine}";
+
       // then git commit
+      gitUpdateCommand += $"git commit -m \"{message}\"{Environment.NewLine}";
+
       // then git push origin master
+      gitUpdateCommand += $"git push origin master{Environment.NewLine}";
+
+
       display("press any key to exit:");
       Console.ReadKey();
     }
